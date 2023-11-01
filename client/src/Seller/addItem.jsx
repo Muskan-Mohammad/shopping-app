@@ -16,7 +16,7 @@ const AddItem = () => {
     company: '',
     color: '',
     category: '',
-    id:29
+    id:30
   });
 
   const handleInputChange = (e) => {
@@ -33,7 +33,7 @@ const AddItem = () => {
       .then((response) => {
         console.log('Data sent successfully:', response.data);
         toast.success("From was Submitted Successfully!!!");
-        const updatedData = [...products, { ...product, id: data.length + 1 }];
+        const updatedData = [...products, { ...product, id: products.length + 1 }];
           console.log("Updated Data:", updatedData);
 
       })

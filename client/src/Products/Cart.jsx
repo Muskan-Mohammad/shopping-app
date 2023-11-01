@@ -12,6 +12,8 @@ import './Buyer.css';
   console.log(":: DATA ::", {products, items})
   const totalAmount = products.reduce((prev, curr) => prev + (+curr.newPrice * items[curr.id]), 0)
 console.log("total amont" , totalAmount);
+
+
 localStorage.setItem('datas', JSON.stringify(products));
 localStorage.setItem('totalAmounts', totalAmount.toString());
 const storedProducts = JSON.parse(localStorage.getItem('datas'));
